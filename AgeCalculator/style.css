@@ -7,7 +7,7 @@
 .parent {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(195deg, #8be8e5, #33e0b8);
+    background: linear-gradient(360deg, #09ff00, #c7be0e, #baa914, #84a5e6);
     color: #0f65e7;
     padding: 10px;
 }
@@ -17,14 +17,13 @@
     margin: 5% 0% 0% 10%;
 }
 .parent__calculator h1 {
-    color: red;
+    color: rgb(21, 255, 0);
     font-size: 70px;
     font-weight: 700;
     font-style:italic;
-    /* text-align: center; */
 }
 .parent__calculator b {
-   color: goldenrod;
+   color: rgb(35, 32, 218);
 } 
 .parent_inner {
     /* width: 60%;
