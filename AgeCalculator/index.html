@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <Details>
+        <summary></summary>
+    </Details> -->
+      <!-- <bdo dir=""></bdo> -->
+      <!-- <abbr title=""></abbr> -->
+      <!-- <samp></samp> -->
+      <!-- <kbd></kbd> -->
+ 
+      
+      <div class="parent">
+          <div class="parent__calculator">
+              <h1>Calculate Your<b> Age</b></h1>
+              <div class="parent_inner">
+                  <div class="user-interate">
+                      <input type="date" id="date" placeholder="Date checker">
+                      <button onclick="calculateAge()">Calculate</button>
+                </div>
+              </div>
+              <p id="result"></p>
+        </div>
+      </div>
+
+      <script>
+      let result = document.getElementById('result');
+
+        let userInput = document.getElementById('date');
+        userInput.max = new Date().toISOString().split('T')[0];
+
+        function calculateAge() {
+            let birthDate = new Date(userInput.value);
+
+            let day1 = birthDate.getDay();//06
+            let month1 = birthDate.getMonth() + 1; //11
+            let year1 = birthDate.getYear(); //2003
+
+            let today = new Date();
+
+            let day2 = today.getDay();//18
+            let month2 = today.getMonth() + 1; //7
+            let year2 = today.getYear(); //2023
+
+            let day3, month3, year3;
+            year3 = year2 - year1; //y3 = 2003 - 2023 = 19  
+
+            if(month2 >= month1) {
+                month3 = month2 - month1;
+            }else {
+                year3--; // 20 - 1 = 19
+                month3 = 12 + month2 - month1;// m3 = 12 + 7 - 11 = 8
+            }
+
+            if(day2 >= day1) {
+                day3 = day2 - day1; //d3 = 18 - 6 = 12
+            }else {
+                month3--;
+                day3 = getDaysInMonth(year1, month1) + day2 - day1;
+            }
+            if (month3 < 0) {
+                month3 = 11;
+                year3--;
+            }
+           result.innerHTML = `<span>${year3}</span> year, <span>${month3}</span> month, and <span>${day3}</span> days old you are...!`;
+        }
+        function getDaysInMonth(year, month) {
+            return new Date(year, month, 0).getDate();
+            
+        }
+      </script>
+
+</body>
+</html>
