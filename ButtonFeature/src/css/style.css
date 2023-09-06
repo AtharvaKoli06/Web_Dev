@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: aquamarine;
+  margin: 0;
+}
+nav {
+}
+nav ul {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  position: absolute;
+  top: 0;
+}
+nav ul li {
+  list-style: none;
+  color: #ffffff;
+}
+.main {
+  width: 100%;
+ display: grid; 
+ gap: 1rem;
+ grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+#card {
+  border-radius: 20px;
+  height: 400px;
+  width: 300px;
+  background-color: rgb(95, 129, 250);
+  text-align: center;
+  margin: 20px;
+}
+#card h1 {
+  font-size: 25px;
+  margin: 10px 0;
+}
+#card img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+#card img:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+#card h5 {
+  font-size: 25px;
+  color: red;
+  margin-bottom: 20px;
+}
+#card button {
+  background-color: cadetblue;
+  color: #ffffff;
+  font-weight: 700px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+  /* drop-shadow: 0 0 6px rgba(0,0,0,0.1); */
+}
+#card #remove {
+  background-color: #dadada;
+  color: #111;
+}
+.message {
+  position: absolute;
+  top: 19px;
+  left: 19px;
+  display: none;
+  border-radius: 20px;
+  height: 400px;
+  width: 300px;
+  background-color: blue;
+  padding: 5px;
+  text-align: center;
+}
+.personName {
+  width: 100%;
+  height: 50px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;  
+
+}
+.personName a {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 30px;
+  font-weight: 400;
+  text-decoration: none;
+  color: red;
+}
+#person-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  position: absolute;
+  left: 25px;
+  top: 10px;
+}
+#UserName {
+  color: orange;
+}
+
+#text {
+  width: 90%;
+  height: 30px;
+  position: absolute;
+  left: 5px;
+  bottom: 10px;
+}
+#send {
+  position: absolute;
+  height: 33px;
+  width: 30px;
+  bottom: 8px;
+  right: 10px;
+}
+.messages {
+  width: 95%;
+  height: 290px;
+  background-color: white;
+  position: absolute;
+  bottom: 47px;
+  left: 5px;
+}
